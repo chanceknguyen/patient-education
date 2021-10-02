@@ -1,0 +1,64 @@
+SNAKE GAME:
+1.	The snake game must be in an open 30 x 30 grid game
+2.	The snake can move up, down, left, right using the A, W, S, D keys
+3.	When the snake gets 20 points or more, the game ends as a win.
+4.	When the game results in a win, the user is brought to a POINTS PAGE (4)
+5.	When the snake bumps into a wall, the game ends as a loss.
+6.	When the game ends as a loss, the user has the option to start the game.
+7.	When the game starts, the users score is reset to 0
+8.	The snake gets 1 point when eating junk food.
+9.	The snake gets 3 points when eating healthy food.
+10.	The snake game must operate on a node website server thing.
+
+WEBPAGE 1:
+1.	When the user clicks on the EARN button, the user is brought to the SWEBPAGE 2.
+2.	When the user clicks on the REDEEM button, the user is brought to the MARKET WEBPAGE 5.
+3.	The user’s points are displayed on the screen.
+
+WEBPAGE 2:
+1.	When the user clicks on the GO BACK button, the user is brought to WEBPAGE 1
+2.	When the user scans the Snake game QR code, the user is brought to the SNAKE GAME PAGE
+3.	When the user scans the Vaccine game QR code, the user is brought to the VACCINE GAME PAGE
+4.	When the user scans the Quiz game QR code, the user is brought to the QUIZ GAME PAGE
+5.	When the user scans the AR game QR code, the user is brought to the AR GAME PAGE
+
+WEBPAGE 4:
+1.	The number of points that the user earned is displayed on screen.
+2.	When the user clicks on the GREAT button, the total points is added to the users point total
+3.	When the user clicks on the GREAT button, the user is brought to WEBPAGE 1
+
+WEBPAGE 5:
+1.	When the user clicks on the GO BACK button, the user is brought to WEBPAGE 1.
+2.	The user’s points are displayed on the screen.
+3.	The title MARKETPLACE is displayed on the screen.
+4.	Pictures of the items are displayed on the screen.
+5.	The REDEEM ITEM appears under the item picture
+6.	The user can scroll through the items displayed.
+7.	Each item will display the number of points needed to get the item.
+8.	The Buttons REDEEM ITEM is displayed in BLUE if the user points amount is greater or equal to the ITEM point amount
+9.	The Buttons REDEEM ITEM is displayed in GREY if the user points amount is greater or equal to the ITEM point amount
+10.	When the user clicks on the REDEEM ITEM, the user is brought to the ITEM PAGE
+
+WEBPAGE 6:
+1.	The item that the user has click on is displayed on the screen
+2.	The Buttons REDEEM ITEM is displayed in BLUE if the user points amount is greater or equal to the ITEM point amount
+3.	The Buttons REDEEM ITEM is displayed in GREY if the user points amount is greater or equal to the ITEM point amount
+4.	When the user clicks the REDEEM ITEM button, If the user points are less than the item’s points, a pop-up message is displayed
+5.	The user can exit the pop-up message when they click the OK button.
+6.	The user can select which room number of where the reward can be delivered.
+7.	When the user clicks the REDEEM ITEM button, if the user’s points are equal or greater than the item points, the user is brought to WEBPAGE 7.
+8.	If the user clicks the GO BACK button, the user is brought to WEBPAGE 5.
+
+WEBPAGE 7:
+1.	The text YOU’VE EARNED <ITEM> is displayed.
+2.	The item that the user redeemed is displayed.
+3.	The item picture is displayed.
+4.	When the user presses the GREAT button, the item points are subtracted from the item points.
+5.	When the user presses the GREAT button, the user is brought to the WEBPAGE 5.
+
+AR GAME:
+1.	The user is displayed a life-sized heart
+2.	The heart is pumping on screen
+3.	The user can get points after 1 minutes of learning about the heart.
+4.	When the user clicks on a heart part, info is displayed above.
+
