@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import Marketplace from './pages/Marketplace.jsx';
 import Dashboard from './pages/Dashboard.jsx';
+import Earn from './pages/Earn.jsx';
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path='/marketplace'>
             <Marketplace name={name} credits={credits}/>
+          </Route>
+          <Route>
+            <Earn />
           </Route>
         </Switch>
       </Router>
