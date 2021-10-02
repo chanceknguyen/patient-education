@@ -5,10 +5,10 @@
   "main": "./server/server.js",
   "scripts": {
     "test": "jest --forceExit",
-    "start": "nodemon ./server/server.js",
+    "start": "node ./server/server.js",
+    "dev-start": "nodemon ./server/sever.js",
     "build": "webpack --config webpack.config.js",
-    "dev-server": "webpack -d --watch",
-    "seed": "node db/seed.js"
+    "dev-server": "webpack -d --watch"
   },
   "jest": {
     "verbose": true
@@ -37,7 +37,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",
     "nodemon": "^2.0.13",
-    "webpack": "^5.56.0",
+    "webpack": "^4.46.0",
     "webpack-cli": "^4.8.0"
   }
 }
