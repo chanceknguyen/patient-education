@@ -5,11 +5,12 @@ import axios from 'axios';
 import Marketplace from './pages/Marketplace.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import Earn from './pages/Earn.jsx';
+import Memory from './games/Memory.jsx';
 
 function App() {
 
-  const [name, setName] = useState("Bob");
-  const [credits, setCredits] = useState(7);
+  const [name, setName] = useState();
+  const [credits, setCredits] = useState();
 
   useEffect(() => {
     axios('/user')
@@ -30,8 +31,11 @@ function App() {
           <Route path='/marketplace'>
             <Marketplace name={name} credits={credits}/>
           </Route>
-          <Route>
-            <Earn />
+          <Route path='/earn'>
+            <Earn name={name} credits={credits}/>
+          </Route>
+          <Route path='/memory'>
+            <Memory />
           </Route>
         </Switch>
       </Router>

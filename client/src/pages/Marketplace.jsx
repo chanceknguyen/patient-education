@@ -3,6 +3,9 @@ import Item from '../components/Item.jsx';
 import Navbar from '../components/Navbar.jsx';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
+import iceCream from '../../dist/assets/icecream.jpeg';
+import mask from '../../dist/assets/mask.jpeg';
+import socks from '../../dist/assets/socks.jpeg';
 
 function Marketplace(props) {
 
@@ -10,17 +13,17 @@ function Marketplace(props) {
     [
       {
         "title" : "Ice Cream",
-        "image" : "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "image" : `${iceCream}`,
         "price" : 5
       },
       {
         "title" : "Socks",
-        "image" : "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "image" : `${socks}`,
         "price" : 10
       },
       {
-        "title" : "McDonalds",
-        "image" : "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
+        "title" : "Mask",
+        "image" : `${mask}`,
         "price" : 15
       }
     ]
