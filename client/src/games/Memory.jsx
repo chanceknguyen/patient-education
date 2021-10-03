@@ -13,6 +13,7 @@ function Memory() {
 
   // const targetNode = document.getElementsByClassName("memory cards");
   // const config = { attributes: true, childList: true, subtree: true };
+  // N.A
 
   //   // Callback function to execute when mutations are observed
   // const callback = function(mutationsList, observer) {
