@@ -52,7 +52,7 @@ function App() {
             <Earn name={name} credits={credits}/>
           </Route>
           <Route path='/memory'>
-            <Memory />
+            <Memory name={name} credits={credits}/>
           </Route>
           <Route>
             <Quiz name={name} credits={credits} creditsAdd={creditsAdd}/>
