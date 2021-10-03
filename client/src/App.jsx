@@ -30,6 +30,13 @@ function App() {
     )
   }
 
+  function creditsRemove(amount) {
+    axios.patch(`/creditsRemove/${amount}`)
+    .then((response) => {
+      setCredits(response.data.credits);
+    })
+  }
+
   return (
 
     <div className="wrapper">
@@ -39,7 +46,7 @@ function App() {
             <Dashboard name={name} credits={credits}/>
           </Route>
           <Route path='/marketplace'>
-            <Marketplace name={name} credits={credits}/>
+            <Marketplace name={name} credits={credits} creditsRemove={creditsRemove}/>
           </Route>
           <Route path='/earn'>
             <Earn name={name} credits={credits}/>

@@ -28,7 +28,6 @@ function Marketplace(props) {
       }
     ]
 
-
   return (
 
     <div>
@@ -43,7 +42,9 @@ function Marketplace(props) {
               title={item.title}
               image={item.image}
               price={item.price}
-              key={item.title}>
+              key={item.title}
+              credits={props.credits}
+              creditsRemove={props.creditsRemove}>
             </Item>)
         })}
         </div>

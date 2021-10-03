@@ -1,6 +1,16 @@
 import React from 'react';
 
 function Item(props) {
+
+  function redeem() {
+    if (props.price > props.credits) {
+      alert("Sorry you do not have enough credits!");
+    } else {
+      alert(`You have succesfully redeemed ${props.title} for ${props.price} credits!`);
+      props.creditsRemove(props.price);
+    }
+  }
+
   return (
     <div className="col mb-5">
       <div className="card h-100">
@@ -12,7 +22,7 @@ function Item(props) {
           </div>
         </div>
         <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-          <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">Redeem</a></div>
+          <div className="text-center" onClick={(e) => redeem()}><a className="btn btn-outline-dark mt-auto" href="#">Redeem</a></div>
         </div>
       </div>
     </div>
