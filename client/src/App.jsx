@@ -18,8 +18,17 @@ function App() {
     .then((response) => {
       setName(response.data.name);
       setCredits(response.data.credits);
+
     })
   }, []);
+
+  function creditsAdd(amount) {
+    axios.patch(`/creditsAdd/${amount}`)
+    .then((response) => {
+      setCredits(response.data.credits);
+    }
+    )
+  }
 
   return (
 
@@ -39,7 +48,7 @@ function App() {
             <Memory />
           </Route>
           <Route>
-            <Quiz name={name} credits={credits}/>
+            <Quiz name={name} credits={credits} creditsAdd={creditsAdd}/>
           </Route>
         </Switch>
       </Router>
