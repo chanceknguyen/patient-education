@@ -19,7 +19,6 @@ app.get('/user', (req, res) => {
 })
 
 app.patch('/creditsAdd/:amount', (req, res) => {
-  console.log(req.params.amount);
   user.credits += Number(req.params.amount);
   res.send(user);
 })

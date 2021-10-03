@@ -1,4 +1,5 @@
 import React,{ useState } from "react";
+import axios from 'axios';
 
 import Navbar from '../components/Navbar.jsx';
 import Header from '../components/Header.jsx';
@@ -91,8 +92,9 @@ export default function Quiz(props)
             }
             else
             {
-                alert("Good job! You completed the quiz!")
+                alert("Good job! You completed the quiz and earned 100 points!")
                 setShowScore(true);
+								props.creditsAdd(100);
             }
         }
 
@@ -105,22 +107,27 @@ export default function Quiz(props)
 
     };
 
-    return (
 
-        <div>
+		if (showScore) {
+			return (
+				<div>
 
-        <Navbar credits={props.credits}/>
-        <Header />
+        	<Navbar credits={props.credits}/>
+       	 	<Header />
+					<div className = 'score-section'>You earned {score} points! </div>
+					<Footer />
+        </div>
+			)
+		} else {
+			return (
+				<div>
 
-        <div className = 'quiz'>
-            {
-                //Replace "false" with logic to display score when user answers all questions
-            }
+        	<Navbar credits={props.credits}/>
+        	<Header />
 
-            {showScore ? (
-                <div className = 'score-section'>You earned {score} points! </div>
-            ) : (
-                <>
+        	<div className = 'quiz'>
+
+					<>
 									<div className="col mb-5">
       							<div className="card h-100">
          							<div className="card-body p-4">
@@ -142,10 +149,11 @@ export default function Quiz(props)
       							</div>
     							</div>
                 </>
-            )}
-        </div>
+								</div>
         <Footer />
         </div>
-    );
+			)
+		}
+
 }
 

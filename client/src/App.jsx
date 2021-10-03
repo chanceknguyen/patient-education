@@ -16,11 +16,28 @@ function App() {
 
   useEffect(() => {
     axios('/user')
+
       .then((response) => {
         setName(response.data.name);
         setCredits(response.data.credits);
       })
+
   }, []);
+
+  function creditsAdd(amount) {
+    axios.patch(`/creditsAdd/${amount}`)
+    .then((response) => {
+      setCredits(response.data.credits);
+    }
+    )
+  }
+
+  function creditsRemove(amount) {
+    axios.patch(`/creditsRemove/${amount}`)
+    .then((response) => {
+      setCredits(response.data.credits);
+    })
+  }
 
   return (
 
@@ -31,13 +48,15 @@ function App() {
             <Dashboard name={name} credits={credits} />
           </Route>
           <Route path='/marketplace'>
-            <Marketplace name={name} credits={credits} />
+
+            <Marketplace name={name} credits={credits} creditsRemove={creditsRemove}/>
+
           </Route>
           <Route path='/earn'>
             <Earn name={name} credits={credits} />
           </Route>
           <Route path='/memory'>
-            <Memory />
+            <Memory name={name} credits={credits}/>
           </Route>
           <Route>
             <Quiz name={name} credits={credits} />
