@@ -6,6 +6,7 @@ import Marketplace from './pages/Marketplace.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import Earn from './pages/Earn.jsx';
 import Memory from './games/Memory.jsx';
+import Quiz from './games/Quiz.jsx';
 
 function App() {
 
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route path='/memory'>
             <Memory />
+          </Route>
+          <Route>
+            <Quiz name={name} credits={credits}/>
           </Route>
         </Switch>
       </Router>

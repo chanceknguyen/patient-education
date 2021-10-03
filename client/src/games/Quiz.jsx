@@ -1,6 +1,10 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 
-export default function Quiz() 
+import Navbar from '../components/Navbar.jsx';
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.jsx';
+
+export default function Quiz(props)
 {
     const questions = [
         {
@@ -63,7 +67,7 @@ export default function Quiz()
 
 
     ];
-    
+
     //Provides the question number corresponding with the elements in the array
     const [currentQuestion, setCurrentQuestion] = useState(0);
 
@@ -72,9 +76,9 @@ export default function Quiz()
 
     const [score, setScore] = useState(0);
 
-    const handleAnswerButtonClick = (isCorrect) => 
-    {   
-        
+    const handleAnswerButtonClick = (isCorrect) =>
+    {
+
 
         if (isCorrect === true)
         {
@@ -89,7 +93,7 @@ export default function Quiz()
             {
                 alert("Good job! You completed the quiz!")
                 setShowScore(true);
-            }  
+            }
         }
 
         else //(isCorrect === false)
@@ -97,11 +101,17 @@ export default function Quiz()
             alert("Incorrect... Try again.");
 
         }
-        
-         
+
+
     };
 
     return (
+
+        <div>
+
+        <Navbar credits={props.credits}/>
+        <Header />
+
         <div className = 'quiz'>
             {
                 //Replace "false" with logic to display score when user answers all questions
@@ -111,19 +121,31 @@ export default function Quiz()
                 <div className = 'score-section'>You earned {score} points! </div>
             ) : (
                 <>
-                    <div className = 'question-section>'>
-                        <div className = 'question-count'>
-                                <span>Question {currentQuestion + 1} </span>/{questions.length}
-                        </div>
-                        <div className = 'question-text'>{questions[currentQuestion].questionText} </div>
-                    </div>
-                    <div className = 'answer-section'>
-                        {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button onClick = {() => handleAnswerButtonClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-                        ))}
-                    </div>
+									<div className="col mb-5">
+      							<div className="card h-100">
+         							<div className="card-body p-4">
+          							<div className="text-center">
+													<div className = 'question-section>'>
+														<div className = 'question-count'>
+															<span>Question {currentQuestion + 1} </span>/{questions.length}
+														</div>
+														<div className = 'question-text'>{questions[currentQuestion].questionText} </div>
+														<div className = 'answer-section'>
+															{questions[currentQuestion].answerOptions.map((answerOption) => (
+																	<button className = "text-center btn btn-outline-dark mt-auto" onClick = {() => handleAnswerButtonClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+															))}
+														</div>
+													</div>
+          							</div>
+        							</div>
+        							<div className="card-footer p-4 pt-0 border-top-0 bg-transparent"></div>
+      							</div>
+    							</div>
                 </>
             )}
         </div>
+        <Footer />
+        </div>
     );
 }
+
