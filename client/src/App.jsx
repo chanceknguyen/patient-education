@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard.jsx';
 import Earn from './pages/Earn.jsx';
 import Memory from './games/Memory.jsx';
 import Quiz from './games/Quiz.jsx';
+import Quick_Med_Flash from './games/Quick_Med_Flash.jsx';
 
 function App() {
 
@@ -15,10 +16,10 @@ function App() {
 
   useEffect(() => {
     axios('/user')
-    .then((response) => {
-      setName(response.data.name);
-      setCredits(response.data.credits);
-    })
+      .then((response) => {
+        setName(response.data.name);
+        setCredits(response.data.credits);
+      })
   }, []);
 
   return (
@@ -27,19 +28,22 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Dashboard name={name} credits={credits}/>
+            <Dashboard name={name} credits={credits} />
           </Route>
           <Route path='/marketplace'>
-            <Marketplace name={name} credits={credits}/>
+            <Marketplace name={name} credits={credits} />
           </Route>
           <Route path='/earn'>
-            <Earn name={name} credits={credits}/>
+            <Earn name={name} credits={credits} />
           </Route>
           <Route path='/memory'>
             <Memory />
           </Route>
           <Route>
-            <Quiz name={name} credits={credits}/>
+            <Quiz name={name} credits={credits} />
+          </Route>
+          <Route path='/quick_med_flash'>
+            <Quick_Med_Flash />
           </Route>
         </Switch>
       </Router>
