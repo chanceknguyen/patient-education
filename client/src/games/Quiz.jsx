@@ -91,7 +91,7 @@ export default function Quiz(props)
             }
             else
             {
-                alert("Good job! You completed the quiz!")
+                alert("Good job! You completed the quiz and earned 100 points!")
                 setShowScore(true);
             }
         }
@@ -117,9 +117,7 @@ export default function Quiz(props)
                 //Replace "false" with logic to display score when user answers all questions
             }
 
-            {showScore ? (
-                <div className = 'score-section'>You earned {score} points! </div>
-            ) : (
+            {
                 <>
 									<div className="col mb-5">
       							<div className="card h-100">
@@ -142,7 +140,7 @@ export default function Quiz(props)
       							</div>
     							</div>
                 </>
-            )}
+            }
         </div>
         <Footer />
         </div>
