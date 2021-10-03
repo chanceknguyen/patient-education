@@ -53,16 +53,16 @@ function App() {
 
           </Route>
           <Route path='/earn'>
-            <Earn name={name} credits={credits} />
+            <Earn name={name} credits={credits} creditsAdd={creditsAdd}/>
           </Route>
           <Route path='/memory'>
-            <Memory name={name} credits={credits}/>
+            <Memory name={name} credits={credits} creditsAdd={creditsAdd}/>
           </Route>
-          <Route>
-            <Quiz name={name} credits={credits} />
+          <Route path='/quiz'>
+            <Quiz name={name} credits={credits} creditsAdd={creditsAdd}/>
           </Route>
           <Route path='/quick_med_flash'>
-            <Quick_Med_Flash />
+            <Quick_Med_Flash name={name} credits={credits} creditsAdd={creditsAdd}/>
           </Route>
         </Switch>
       </Router>

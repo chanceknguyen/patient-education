@@ -28,7 +28,7 @@ function Earn(props) {
                   </div>
                 </div>
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                  <div className="text-center"><Link to="/memory" className="btn btn-outline-dark mt-auto">Play</Link></div>
+                  <div className="text-center"><Link to="/memory" className="btn btn-outline-dark mt-auto" onClick={() => {props.creditsAdd(50)}}>Play</Link></div>
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@ function Earn(props) {
                   </div>
                 </div>
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                  <div className="text-center"><Link to="/quiz" className="btn btn-outline-dark mt-auto">Play</Link></div>
+                  <div className="text-center"><Link to="/quiz" className="btn btn-outline-dark mt-auto" >Play</Link></div>
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@ function Earn(props) {
                   </div>
                 </div>
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                  <div className="text-center"><Link to="/quick_med_flash" className="btn btn-outline-dark mt-auto">Play</Link></div>
+                  <div className="text-center"><Link to="/quick_med_flash" className="btn btn-outline-dark mt-auto" onClick={() => {props.creditsAdd(50)}}>Play</Link></div>
                 </div>
               </div>
             </div>
