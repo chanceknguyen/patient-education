@@ -116,7 +116,6 @@ export default function Quiz(props)
             {
                 //Replace "false" with logic to display score when user answers all questions
             }
-
             {
                 <>
 									<div className="col mb-5">

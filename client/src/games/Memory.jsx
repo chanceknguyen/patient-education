@@ -8,11 +8,12 @@ function Memory() {
 
   useEffect(() => {
     console.log('found')
-  },[document.getElementsByClassName("final-screen is-win")])
+  }, [document.getElementsByClassName("final-screen is-win")])
 
 
   // const targetNode = document.getElementsByClassName("memory cards");
   // const config = { attributes: true, childList: true, subtree: true };
+  // N.A
 
   //   // Callback function to execute when mutations are observed
   // const callback = function(mutationsList, observer) {
@@ -33,18 +34,18 @@ function Memory() {
   // // Start observing the target node for configured mutations
   // observer.observe(targetNode, config);
 
-  return(
+  return (
     <div>
 
-    <Navbar />
-    <Header />
-    <div className="interacty_padding justify-content-center" style={{position: "relative", padding: "99.5% 0 0 0"}}>
-      <div className="interacty_wrapper" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}>
-      <iframe style={{border: "none", width: "85%", height: "85%"}} src="https://p.interacty.me/49dfa061048bedeb/iframe.html">
-      </iframe>
+      <Navbar />
+      <Header />
+      <div className="interacty_padding justify-content-center" style={{ position: "relative", padding: "99.5% 0 0 0" }}>
+        <div className="interacty_wrapper" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
+          <iframe style={{ border: "none", width: "100%", height: "100%" }} src="https://p.interacty.me/49dfa061048bedeb/iframe.html">
+          </iframe>
+        </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </div>
   )
 };
